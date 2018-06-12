@@ -1,0 +1,33 @@
+/* Functions in C
+
+You have to write a function int max_of_four(int a, int b, int c, int d) which reads four arguments and returns the greatest of them. 
+
+Input Format
+- Input will contain four integers - , one in each line.
+
+Output Format
+Print the greatest of the four integers.
+Note: I/O will be automatically handled.
+*/
+
+#include <stdio.h>
+
+int max_of_four(int a, int b, int c, int d){
+    int maximum;
+    //Assume a is the largest
+    maximum = a;
+    
+    //Compare to the rest (series if)
+    if(b>maximum) maximum = b;
+    if(c>maximum) maximum = c;
+    if(d>maximum) maximum = d;
+    return maximum;
+}
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}

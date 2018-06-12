@@ -1,0 +1,42 @@
+/* Sum and Difference of Two Integers/Float
+Your task is to take two numbers of int data type, two numbers of float data type as input and output their sum:
+  1. Declare variables: two of type int and two of type float.
+  2. Read lines of input from stdin (according to the sequence given in the 'Input Format' section below) and initialize your variables.
+  3. Use the and operator to perform the following operations:
+        Print the sum and difference of two int variable on a new line.
+        Print the sum and difference of two float variable rounded to one decimal place on a new line. 
+
+Input Format
+- The first line contains two integers.
+- The second line contains two floating point numbers. 
+*/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+	//Declare variables: two of type int and two of type float
+    int firstInteger, secondInteger;
+    float firstFloat, secondFloat;
+    
+    //Scan input integer and float
+    scanf("%d %d", &firstInteger, &secondInteger);
+    scanf("%f %f", &firstFloat, &secondFloat);
+    
+    //Declare sum and difference variables for each specific type
+    int sumInt, diffInt;
+    float sumFloat, diffFloat;
+    
+    //Operations
+    sumInt = firstInteger+secondInteger;
+    diffInt = firstInteger-secondInteger;
+    sumFloat = firstFloat+secondFloat;
+    diffFloat = firstFloat-secondFloat;
+    
+    //Print the sum and difference
+    printf("%d %d\n", sumInt, diffInt);
+    printf("%.1f %.1f", sumFloat, diffFloat);
+    return 0;
+}

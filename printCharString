@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() 
+{
+    //scan character
+    char ch;
+    scanf("%c", &ch);
+    
+    //scan string
+    char s[100];
+    scanf("%s", &s);
+    
+    //scan the newline or else the sentence won't be recognized
+    scanf("\n");
+    
+    //scan sentence
+    char sen[100];
+    scanf("%[^\n]%c", &sen);
+    
+    //Print character, string, sentence
+    printf("%c\n", ch);
+    printf("%s\n", s);
+    printf("%s", sen);
+    return 0;
+}

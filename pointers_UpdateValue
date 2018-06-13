@@ -7,3 +7,29 @@ Input Format
 Output Format
 - You have to print the updated value of a and b , on two different lines. 
 */
+
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    //Declaration to store previous value for a
+    int prevA = *a;
+    //Sum of two numbers stored to *a
+    *a+=*b;
+    //The absolute value of two numbers stored in *b
+    *b= abs(prevA-*b);
+}
+
+int main() {
+    //Declaration of pointers and variables
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    //Scanning the inpute
+    scanf("%d %d", &a, &b);
+    //Function to update/ perform the specific operations
+    update(pa, pb);
+    //Print the value og a and b
+    printf("%d\n%d", a, b);
+
+    return 0;
+}

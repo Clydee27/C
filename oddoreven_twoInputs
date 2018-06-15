@@ -1,0 +1,41 @@
+/*
+For each integer in the interval (given as input) :
+
+    If 1<= n <= 9, then print the English representation of it in lowercase. That is "one" for , "two" for , and so on.
+    Else if n > 9, print "nine".
+    Else if n > 9and it is an even number, then print "even".
+    Else if n > 9and it is an odd number, then print "odd".
+
+  Input Format
+    - The first line contains an integer,a .
+    - The second line contains an integer,b. 
+    
+    *HackerRank told me to use for loop, but modulo is efficient
+*/
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() 
+{
+    int a, b;
+    char numbers[9][10]={"one","two","three","four","five","six","seven","eight","nine"};
+    
+    scanf("%d\n%d", &a, &b);
+  	
+    if(a>=1&&a<=9){printf("%s \n", numbers+(a-1));}
+        else {printf("nine\n");}
+    if(b>=1&&b<=9){printf("%s \n", numbers+(b-1));}
+        else {printf("nine\n");}
+    
+    if(a%2 == 0){printf("even\n");}
+        else{printf("odd\n");}
+    if(b%2 == 0){printf("even\n");}
+        else{printf("odd\n");}
+
+    return 0;
+}

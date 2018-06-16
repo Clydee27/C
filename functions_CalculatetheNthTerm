@@ -3,6 +3,7 @@ Task
 There is a series,S, where the next term is the sum of pervious three terms. Given the first three terms of the series a,b,c and respectively, you have to output the nth term of the series using recursion.
 
 Recursive method for calculating nth term is given below.
+
 */
 #include <stdio.h>
 #include <string.h>

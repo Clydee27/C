@@ -1,0 +1,42 @@
+/*
+Given a string, , consisting of alphabets and digits, find the frequency of each digit in the given string.
+
+Constraints
+1<=length<=1000
+All the elements of num are made of english alphabets and digits.
+*/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    //stores the input string
+    char inputString[1000];
+    //array stores the counter for each digit
+    int numericalCounter[10]={0};
+    
+    int i,k,counter = 0;
+    
+    scanf("%s", &inputString);
+    int stringLength = strlen(inputString);
+    
+    //loop until the end of the character of string
+    for(i=0; i<stringLength;i++)
+    {
+        //checking if a character is a number
+        if(inputString[i]>='0'&&inputString[i]<='9'){
+            //since it is character, it has ascii value, -48 from its decimal value to obtain the 
+            // original number
+            counter = inputString[i]-48;
+            //used the counter as a map to add occurence to a certain digit
+            numericalCounter[counter]++;
+        }
+    }
+    //print the array
+    for(k=0;k<10;k++){
+        printf("%d ", numericalCounter[k]);
+    }
+    return 0;
+}

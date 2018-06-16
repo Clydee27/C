@@ -1,0 +1,40 @@
+/*
+Task
+In this challenge, you have to input a five digit number and print the sum of digits of the number.
+
+Input Format
+The input contains a single five digit number.
+*/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	
+    int n;
+    //Accept input
+    scanf("%d", &n);
+    
+    //declaration of array, divisor and digits
+    int divisor[4] = {10,100,1000,10000};
+    int digits[5]={0};
+
+    //for loop for separating the digits and putting them into digits array
+    for(int i=-1; i<4; i++){
+        //if it's the first element--extracting the ones digit
+        if(i==-1){digits[i+1]=n%10;}
+        //extracting the rest of the digits
+        else{digits[i+1]=(n/divisor[i])%10;
+        }
+    }
+    
+    //Adding them all
+    int sum=0;
+    for(int j=0;j<5;j++){
+        sum+=digits[j];
+    }
+    
+    printf("%d",sum);
+    return 0;
+}
